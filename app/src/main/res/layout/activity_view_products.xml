@@ -1,0 +1,120 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:fillViewport="true"
+    tools:context=".activity.ViewProducts">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/_10sdp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/logo" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_below="@+id/imageView"
+        android:id="@+id/searhLayout"
+        android:orientation="horizontal"
+        android:background="@color/red">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/_5sdp"
+            android:background="@drawable/edittextrectangle_box_search"
+            android:hint="Search Product..."
+            android:imeOptions="actionSearch"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:paddingStart="@dimen/_10sdp"
+            android:id="@+id/searchEditBox"
+            android:inputType="text"
+             />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/searchImageButton"
+            android:contentDescription="@string/app_name"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_alignEnd="@+id/searchEditBox"
+            android:src="@drawable/search"
+
+            />
+    </RelativeLayout>
+
+    <com.kftsoftwares.inventorymanagment.util.TextViewRegular
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/searhLayout"
+        android:text="View Archives"
+        android:textColor="@color/white"
+        android:id="@+id/viewArchives"
+        android:drawableStart="@mipmap/airc"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:textSize="@dimen/_14sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        />
+
+    <com.kftsoftwares.inventorymanagment.util.TextViewRegular
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/searhLayout"
+        android:text="Add Product"
+        android:layout_alignParentEnd="true"
+        android:drawableStart="@mipmap/add"
+        android:id="@+id/addProduct"
+        android:textColor="@color/white"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:textSize="@dimen/_14sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recyclerView"
+        android:layout_margin="@dimen/_5sdp"
+        android:background="#e4e4e4"
+        android:layout_below="@+id/addProduct"
+        android:layout_above="@+id/progressBar"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/addProduct"
+        android:background="@color/white"
+        android:visibility="gone"
+        android:id="@+id/no_data_found"
+        >
+
+        <com.kftsoftwares.inventorymanagment.util.TextViewRegular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NO PRODUCT FOUND"
+            android:textSize="@dimen/_20sdp"
+            android:layout_centerInParent="true"
+            />
+
+    </RelativeLayout>
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/progressBar"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content" />
+
+
+</RelativeLayout>

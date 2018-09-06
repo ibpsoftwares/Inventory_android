@@ -1,0 +1,142 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:fillViewport="true"
+    tools:context=".activity.ViewProducts">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_10sdp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/logo" />
+
+        <ImageView
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="start"
+            android:id="@+id/backButton"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:contentDescription="@string/app_name"
+            android:src="@mipmap/back" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/parentScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relativeLayout"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:id="@+id/viewPagerRelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_250sdp"
+                android:background="#e2d4d3d3"
+                android:layout_margin="@dimen/_10sdp"
+                android:contentDescription="@string/app_name" />
+
+
+            <LinearLayout
+                android:id="@+id/pager_dots"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@android:color/transparent"
+                android:clickable="false"
+                android:layout_centerHorizontal="true"
+                android:layout_alignBottom="@+id/viewPager"
+                android:gravity="start"
+                android:orientation="horizontal" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/viewPager"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="#e2d4d3d3"
+                android:padding="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <com.kftsoftwares.inventorymanagment.util.TextViewBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/productNameLabel"
+                    android:text="@string/product_name"
+
+                    />
+
+                <com.kftsoftwares.inventorymanagment.util.TextViewRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/productName"
+                    android:layout_toEndOf="@+id/productNameLabel"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:lines="1"
+
+                    />
+
+
+                <com.kftsoftwares.inventorymanagment.util.TextViewBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/productCodeLabel"
+                    android:layout_below="@+id/productNameLabel"
+                    android:text="@string/product_code"
+
+                    />
+
+                <com.kftsoftwares.inventorymanagment.util.TextViewRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/productCode"
+                    android:layout_below="@+id/productNameLabel"
+                    android:layout_toEndOf="@+id/productNameLabel"
+                    android:layout_marginStart="@dimen/_5sdp"
+
+                    />
+
+
+                <com.kftsoftwares.inventorymanagment.util.TextViewBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/productDetailLabel"
+                    android:layout_below="@+id/productCodeLabel"
+                    android:text="@string/product_details"
+
+                    />
+
+                <com.kftsoftwares.inventorymanagment.util.TextViewRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/productDetail"
+                    android:layout_below="@+id/productDetailLabel"
+                    />
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+</RelativeLayout>

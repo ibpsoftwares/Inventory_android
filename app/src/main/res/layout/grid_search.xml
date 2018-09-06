@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            card_view:cardElevation="2dp"
+            >
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+            <ImageView
+                android:id="@+id/productImage"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_200sdp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitXY"
+
+                android:src="@mipmap/placeholder" />
+            <ImageView
+                android:id="@+id/imageHeart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/del"
+                android:layout_gravity="end"
+                android:clickable="true"
+                android:visibility="gone"
+                android:focusable="true"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_alignParentEnd="true"
+                android:contentDescription="@string/app_name" />
+
+                <ImageView
+                    android:id="@+id/edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/edit"
+                    android:layout_gravity="end"
+                    android:clickable="true"
+                    android:visibility="gone"
+                    android:layout_toStartOf="@+id/imageHeart"
+                    android:focusable="true"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:contentDescription="@string/app_name" />
+
+                <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/productImage"
+                    android:orientation="vertical"
+                android:padding="@dimen/_5sdp">
+
+                <com.kftsoftwares.inventorymanagment.util.TextViewLight
+                    android:id="@+id/productName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:layout_margin="@dimen/_2sdp"
+                    android:lines="1"
+                    android:text="djkghjgsjh"
+                    android:ellipsize="end"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content">
+
+                        <com.kftsoftwares.inventorymanagment.util.TextViewBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:layout_marginStart="@dimen/_2sdp"
+                            android:lines="1"
+                            android:text="Purchase Date:"
+                            android:ellipsize="end"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_12ssp" />
+
+
+
+                        <com.kftsoftwares.inventorymanagment.util.TextViewLightItilic
+                            android:id="@+id/purchaseDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:layout_marginStart="@dimen/_2sdp"
+                            android:lines="1"
+                            android:ellipsize="end"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_12ssp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content">
+
+                        <com.kftsoftwares.inventorymanagment.util.TextViewBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:layout_margin="@dimen/_2sdp"
+                            android:lines="1"
+                            android:text="Location:"
+                            android:ellipsize="end"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_12ssp" />
+
+
+
+                        <com.kftsoftwares.inventorymanagment.util.TextViewRegular
+                            android:id="@+id/location"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:layout_margin="@dimen/_2sdp"
+                            android:lines="1"
+                            android:ellipsize="end"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_12ssp" />
+
+                    </LinearLayout>
+
+
+
+
+
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+
+
+        <ProgressBar
+            android:id="@+id/progrss_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
+

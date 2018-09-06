@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:fillViewport="true"
+    tools:context=".activity.AddProduct">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/relative"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_10sdp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/logo" />
+
+        <ImageView
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_alignParentStart="true"
+            android:layout_gravity="start"
+            android:id="@+id/imageBack"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"
+            android:src="@mipmap/back" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_below="@+id/relative"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        android:id="@+id/scrollView"
+        android:layout_height="wrap_content">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:alpha="0.8"
+            android:background="@color/white"
+            android:gravity="start"
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp">
+
+
+            <com.kftsoftwares.inventorymanagment.util.TextViewBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:text="Add Product"
+                android:textColor="@color/red"
+                android:textSize="@dimen/_16sdp"
+
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_gravity="start">
+
+                <com.kftsoftwares.inventorymanagment.util.TextViewBold
+                    android:id="@+id/productDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:text="@string/product_detail"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sdp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignEnd="@+id/productDetail"
+                    android:layout_alignStart="@+id/productDetail"
+                    android:layout_below="@+id/productDetail"
+                    android:layout_gravity="start"
+                    android:background="@color/black"
+                     />
+
+            </RelativeLayout>
+
+            <com.kftsoftwares.inventorymanagment.util.TextViewRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:text="@string/name"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+            <com.kftsoftwares.inventorymanagment.util.EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_25sdp"
+                android:hint="@string/enter_product_name"
+                android:padding="@dimen/_5sdp"
+                android:id="@+id/productName"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/edittextrectangle_box" />
+
+            <com.kftsoftwares.inventorymanagment.util.TextViewRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/code"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+
+
+            <com.kftsoftwares.inventorymanagment.util.EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_25sdp"
+                android:hint="@string/enter_product_code"
+                android:padding="@dimen/_5sdp"
+                android:id="@+id/productCode"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/edittextrectangle_box" />
+
+
+
+
+            <com.kftsoftwares.inventorymanagment.util.TextViewRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/make"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+            <com.kftsoftwares.inventorymanagment.util.EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_25sdp"
+                android:id="@+id/productMake"
+                android:hint="@string/enter_product_male"
+                android:padding="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/edittextrectangle_box" />
+
+            <com.kftsoftwares.inventorymanagment.util.TextViewRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/model"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+            <com.kftsoftwares.inventorymanagment.util.EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_25sdp"
+                android:id="@+id/productModel"
+                android:hint="@string/enter_product_model"
+                android:padding="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/edittextrectangle_box" />
+
+
+            <com.kftsoftwares.inventorymanagment.util.TextViewRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/category"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:background="@drawable/edittextrectangle_box"
+                android:layout_height="@dimen/_25sdp">
+
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:id="@+id/categorySpinner"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:id="@+id/layoutSubCategory"
+                android:background="@drawable/edittextrectangle_box"
+                android:layout_height="@dimen/_25sdp">
+
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:id="@+id/locationSubCat"
+                    android:layout_height="@dimen/_25sdp"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:id="@+id/layoutSubCategory2"
+                android:visibility="gone"
+                android:background="@drawable/edittextrectangle_box"
+                android:layout_height="@dimen/_25sdp">
+
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:id="@+id/locationSubCat2"
+                    android:layout_height="@dimen/_25sdp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:id="@+id/layoutSubCategory3"
+                android:visibility="gone"
+                android:background="@drawable/edittextrectangle_box"
+                android:layout_height="@dimen/_25sdp">
+
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:id="@+id/locationSubCat3"
+                    android:layout_height="@dimen/_25sdp"/>
+
+            </LinearLayout>
+
+            <com.kftsoftwares.inventorymanagment.util.TextViewRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/descreption"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+            <com.kftsoftwares.inventorymanagment.util.EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_25sdp"
+                android:hint="@string/enter_product_description"
+                android:padding="@dimen/_5sdp"
+                android:id="@+id/productDesc"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/edittextrectangle_box" />
+
+            <com.kftsoftwares.inventorymanagment.util.TextViewRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/quantity"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+            <com.kftsoftwares.inventorymanagment.util.EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_25sdp"
+                android:hint="@string/enter_quantity"
+                android:id="@+id/enterQuantity"
+                android:padding="@dimen/_5sdp"
+                android:inputType="number"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/edittextrectangle_box" />
+
+
+            <com.kftsoftwares.inventorymanagment.util.TextViewRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/image1"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+            <com.kftsoftwares.inventorymanagment.util.TextViewLight
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="@string/browse"
+                android:id="@+id/image1"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textSize="@dimen/_15sdp"
+                android:background="@color/red"
+                />
+
+            <ImageView
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:id="@+id/testingImage"
+                android:visibility="gone"
+                android:background="@color/white"
+                android:contentDescription="@string/app_name"
+
+                />
+
+            <com.kftsoftwares.inventorymanagment.util.TextViewRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/image2"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+            <com.kftsoftwares.inventorymanagment.util.TextViewLight
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="@string/browse"
+                android:id="@+id/image2"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textSize="@dimen/_15sdp"
+                android:background="@color/red"
+                />
+            <com.kftsoftwares.inventorymanagment.util.TextViewRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/image3"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+            <com.kftsoftwares.inventorymanagment.util.TextViewLight
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="@string/browse"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:id="@+id/image3"
+                android:textSize="@dimen/_15sdp"
+                android:background="@color/red"
+                />
+            <com.kftsoftwares.inventorymanagment.util.TextViewRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/invoice"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+            <com.kftsoftwares.inventorymanagment.util.TextViewLight
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="@string/browse"
+                android:id="@+id/invoice"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textSize="@dimen/_15sdp"
+                android:background="@color/red"
+                />
+
+            <com.kftsoftwares.inventorymanagment.util.TextViewRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/invoice_date"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+            <com.kftsoftwares.inventorymanagment.util.TextViewLight
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_25sdp"
+                android:hint="@string/select_invoice_date"
+                android:padding="@dimen/_5sdp"
+                android:id="@+id/selectInvoice"
+                android:textSize="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/edittextrectangle_box" />
+
+            <com.kftsoftwares.inventorymanagment.util.TextViewRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/putin_date"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+            <com.kftsoftwares.inventorymanagment.util.TextViewLight
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_25sdp"
+                android:hint="@string/select_putin_date"
+                android:padding="@dimen/_5sdp"
+                android:id="@+id/putInDate"
+                android:textSize="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:background="@drawable/edittextrectangle_box" />
+
+            <com.kftsoftwares.inventorymanagment.util.TextViewRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/expire_date_if_any"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+            <com.kftsoftwares.inventorymanagment.util.TextViewRegular
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_25sdp"
+                android:hint="@string/select_expire_date"
+                android:id="@+id/selectExpireDate"
+                android:padding="@dimen/_5sdp"
+                android:textSize="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/edittextrectangle_box" />
+
+
+            <com.kftsoftwares.inventorymanagment.util.TextViewRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/additional_info"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+            <com.kftsoftwares.inventorymanagment.util.EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:hint="@string/enter_any_additional_info_about_the_projext"
+                android:padding="@dimen/_5sdp"
+                android:id="@+id/enterAdditionalDetail"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/edittextrectangle_box" />
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_gravity="start">
+
+                <com.kftsoftwares.inventorymanagment.util.TextViewBold
+                    android:id="@+id/productLocationDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:text="@string/product_location_detail"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sdp" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_alignEnd="@+id/productLocationDetail"
+                    android:layout_alignStart="@+id/productLocationDetail"
+                    android:layout_below="@+id/productLocationDetail"
+                    android:layout_gravity="start"
+                    android:background="@color/black"
+                   />
+
+
+            </RelativeLayout>
+
+
+            <com.kftsoftwares.inventorymanagment.util.TextViewRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/location"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:background="@drawable/edittextrectangle_box"
+                android:layout_height="@dimen/_25sdp">
+
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:id="@+id/location"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:id="@+id/layoutSubLocation"
+                android:background="@drawable/edittextrectangle_box"
+                android:layout_height="@dimen/_25sdp">
+
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:id="@+id/locationSub"
+                    android:layout_height="@dimen/_25sdp"/>
+
+            </LinearLayout>
+
+            <com.kftsoftwares.inventorymanagment.util.TextViewRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/department"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:background="@drawable/edittextrectangle_box"
+                android:layout_height="@dimen/_25sdp">
+
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:id="@+id/department"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+            <com.kftsoftwares.inventorymanagment.util.TextViewRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/assigned_name"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+            <com.kftsoftwares.inventorymanagment.util.EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_25sdp"
+                android:hint="@string/enter_name_of_employee"
+                android:padding="@dimen/_5sdp"
+                android:id="@+id/nameOfEmployee"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/edittextrectangle_box" />
+
+            <com.kftsoftwares.inventorymanagment.util.TextViewRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/assigned_emp_id"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+            <com.kftsoftwares.inventorymanagment.util.EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_25sdp"
+                android:hint="@string/enter_employee_id"
+                android:padding="@dimen/_5sdp"
+                android:id="@+id/enterEmployeeId"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/edittextrectangle_box" />
+
+            <com.kftsoftwares.inventorymanagment.util.TextViewRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/team_leader"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:background="@drawable/edittextrectangle_box"
+                android:layout_height="@dimen/_25sdp">
+
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:id="@+id/teamLeader"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_25sdp"
+                android:background="@color/red"
+                android:text="Save"
+                android:id="@+id/addProduct"
+                android:textColor="@color/white"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                />
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    </RelativeLayout>
+

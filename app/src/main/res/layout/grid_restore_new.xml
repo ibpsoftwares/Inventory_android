@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            card_view:cardElevation="2dp"
+            >
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+            <ImageView
+                android:id="@+id/productImage"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_200sdp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitXY"
+                android:src="@mipmap/placeholder" />
+            <ImageView
+                android:id="@+id/imageHeart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/restore"
+                android:layout_gravity="end"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_alignParentEnd="true"
+                android:contentDescription="@string/app_name" />
+
+                <ImageView
+                    android:id="@+id/edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/edit"
+                    android:layout_gravity="end"
+                    android:clickable="true"
+                    android:layout_toStartOf="@+id/imageHeart"
+                    android:focusable="true"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:contentDescription="@string/app_name" />
+
+                <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/productImage"
+                android:padding="@dimen/_5sdp">
+
+                <com.kftsoftwares.inventorymanagment.util.TextViewRegular
+                    android:id="@+id/productName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_18sdp"
+                    android:gravity="center"
+                    android:layout_centerHorizontal="true"
+                    android:lines="1"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp" />
+
+
+           </RelativeLayout>
+
+
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+
+
+        <ProgressBar
+            android:id="@+id/progrss_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
+
